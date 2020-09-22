@@ -27,7 +27,7 @@ function ProductList(props){
     }
 
     return(
-        <table className ="table-auto mx-20">
+        <table className ="table-auto">
             <tr>
                 {makeHeaders()}
             </tr>

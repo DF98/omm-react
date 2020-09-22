@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './output.css';
-import App from './App';
+//import App from './App';
 import ProductList from './ProductList';
 import NavBar from './NavBar';
 import Header from './Header';
 import Card from './Card';
 import * as serviceWorker from './serviceWorker';
-import phoneIcon from './phone.svg';
-import emailIcon from './email.svg';
-import locationIcon from './location.svg';
 
-let sausageHeaders = ["Sausage", "Description", "Price"];
+let sausageHeaders = ["Sausage", "Description"];
 
 let sausages = [
   {
