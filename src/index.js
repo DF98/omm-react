@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './output.css';
-//import App from './App';
+import App from './App';
 import ProductList from './ProductList';
 import NavBar from './NavBar';
 import Header from './Header';
