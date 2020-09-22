@@ -1,88 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './output.css';
-//import App from './App';
+import App from './App';
 import ProductList from './ProductList';
 import NavBar from './NavBar';
 import Header from './Header';
 import Card from './Card';
 import * as serviceWorker from './serviceWorker';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Products from './Products';
+import Contact from './Contact';
 
-let sausageHeaders = ["Sausage", "Description"];
 
-let sausages = [
-  {
-    name: "BBQ",
-    description: "Classic aussie snags."
-  },
-  {
-    name: "Continental",
-    description: "Fantastic beef and pork german style sausages."
-  },
-  {
-    name: "Spanish Chorizo",
-    description: "Smokey beef spanish sausages."
-  },
-  {
-    name: "Red Wine and Fennel",
-    description: "Pork infused with red wine and fennel."
-  },
-  {
-    name: "Pork and Leek",
-    description: "Greek style pork sausage with leek."
-  },
-  {
-    name: "Loukaniko",
-    description: "Greek style beef sausages with garlic and a hint of orange"
-  },
-  {
-    name: "Pork and Fennel",
-    description: "Italian style pork sausages with Fennel"
-  },
-  {
-    name: "Mild Pork",
-    description: "Italian style pork sausages with salt and pepper"
-  },
-  {
-    name: "Hot Pork",
-    description: "Italian style hot pork sausages"
-  },
-  {
-    name: "Party-Size Mild Pork",
-    description: "Smaller variation of the Mild Pork sausages"
-  },
-  {
-    name: "Party-Size Pork and Fennel",
-    description: "Smaller variation of the Pork and Fennel sausages"
-  },
-  {
-    name: "Party-Size Hot Pork",
-    description: "Smaller variation of the Hot Pork sausages"
-  }
-]
+
+
+//list of sausages
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <Router>
     <NavBar />
-    <Header />
-    {/* <div className="flex flex-wrap">
-      <div className="w-full">
-        <ProductList products={sausages} tableHeaders={sausageHeaders} />
-      </div>
-    </div> */}
-
-      <div className="flex flex-wrap mt-10">
-        <div className="w-1/3 pl-8">
-          <Card title="Phone" info="0431 348 509" />
-        </div>
-        <div className="w-1/3 pl-8">
-          {/* passing in html found:https://stackoverflow.com/questions/33381029/react-how-to-pass-html-tags-in-props */}
-          <Card title="Email" info= {["oakleighmarketmeat", <br></br>,  "@gmail.com"]} />
-        </div>
-        <div className="w-1/3 pl-8">
-          <Card title="Address" info="Shop 13, 12-18 Chester Street Oakleigh 3166" />
-        </div>
-      </div>
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/products">
+            <Products />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/">
+            <Contact />
+          </Route>
+        </Switch>
+    </Router>
+    {/* insert the rest of the page here */}
     
   </React.StrictMode>,
   document.getElementById('root')
