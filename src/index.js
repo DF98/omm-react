@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import Products from './Products';
 import Contact from './Contact';
+import Home from './Home';
 
 
 
@@ -36,7 +37,7 @@ ReactDOM.render(
             <Contact />
           </Route>
           <Route path="/">
-            <Contact />
+            <Home />
           </Route>
         </Switch>
     </Router>

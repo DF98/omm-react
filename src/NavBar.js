@@ -5,6 +5,7 @@ import Contact from './Contact';
 import {
     Link
 } from "react-router-dom";
+import {ReactComponent as HomeIcon} from '../node_modules/bootstrap-icons/icons/house-fill.svg';
 
 function NavBar() {
     return (
@@ -17,12 +18,12 @@ function NavBar() {
                 <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div class="text-sm lg:flex-grow">
                         <Link to="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4">
-                            Home
+                            <div><HomeIcon height='20px' width='20px'/></div> 
                         </Link>
-                        <Link to="/products" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4">
+                        <Link to="/products" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4 text-lg">
                             Products
                         </Link>
-                        <Link to="/contact" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4">
+                        <Link to="/contact" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-500 mr-4 text-lg">
                             Contact
                         </Link>
                     </div>
